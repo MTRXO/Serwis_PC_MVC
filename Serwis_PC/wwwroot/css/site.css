@@ -1,22 +1,145 @@
-html {
-  font-size: 14px;
+.header {
+    position: relative;
+    background-image: url("pexels-athena-2582932.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 180px 20px 350px 20px; /* zwiêkszony padding dó³ i góra */
+    color: white;
+    text-align: center;
+    min-height: 700px; /* wiêksza wysokoœæ */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+    font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    .header > h1 {
+        position: relative;
+        z-index: 1;
+        margin: 0 0 15px 0;
+        font-family: 'Anton', sans-serif; /* mocna, wyrazista czcionka z Google Fonts */
+        font-size: 3.5rem;
+        color: #fff;
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+        line-height: 1.1;
+        letter-spacing: 1px;
+    }
+
+    .header > p {
+        position: relative;
+        z-index: 1;
+        margin: 0 auto;
+        max-width: 600px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 1.5rem;
+        color: #f0f0f0;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+        line-height: 1.4;
+    }
+
+.UnderImg h1 {
+    color: black;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+footer {
+    width: 100%;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+    footer .container {
+        max-width: 1140px; /* zostaw domyœlnie */
+        margin: 0 auto;
+    }
+
+footer {
+    background-color: #212529;
+    color: white;
 }
 
-body {
-  margin-bottom: 60px;
+.card-usluga {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .card-usluga:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-usluga h4 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        font-weight: 600;
+        color: #212529;
+    }
+
+    .card-usluga p {
+        font-size: 1rem;
+        color: #444;
+        margin: 0;
+    }
+
+.serviveheader {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.steps-container {
+    background-color: #f8f9fa; /* jasne t³o */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* delikatny cieñ */
+    border-radius: 12px;
+}
+
+.steps-list {
+    list-style: none;
+    counter-reset: step-counter;
+    padding-left: 0;
+    margin: 0;
+}
+
+    .steps-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+        color: #212529;
+        font-weight: 500;
+        padding-left: 0;
+        position: relative;
+    }
+
+.step-number {
+    flex: 0 0 36px;
+    height: 36px;
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(13, 110, 253, 0.5);
+    margin-top: 2px;
+    position: static;
+}
+/* Responsywnoœæ */
+@media (max-width: 768px) {
+    .header > h1 {
+        font-size: 2.2rem;
+    }
+
+    .header > p {
+        font-size: 1.1rem;
+        max-width: 80%;
+    }
 }
