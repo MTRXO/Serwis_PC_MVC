@@ -10,6 +10,7 @@ namespace SerwisModels
     public class RequestModel
     {
         [Required]
+        [Key]
         public int RequestID { get; set; }
         [Required]
         [StringLength(9, MinimumLength = 9, ErrorMessage = "Wprowadz porawny numer telefonu")]
