@@ -15,4 +15,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SerwisDataAccess\SerwisDataAccess.csproj" />
+    <ProjectReference Include="..\SerwisModels\SerwisModels.csproj" />
+  </ItemGroup>
+
 </Project>
