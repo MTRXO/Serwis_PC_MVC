@@ -1,4 +1,4 @@
-namespace Serwis_PC.Models
+    namespace Serwis_PC.Models
 {
     public class ErrorViewModel
     {
