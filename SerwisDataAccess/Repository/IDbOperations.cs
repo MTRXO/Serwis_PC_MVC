@@ -9,5 +9,6 @@ namespace SerwisDataAccess.Repository
     public interface IDbOperations<T> where T : class
     {
         void AddRequest(T request);
+        void SaveChanges();
     }
 }

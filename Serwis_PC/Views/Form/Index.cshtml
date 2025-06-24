@@ -3,7 +3,7 @@
         <h1 class="text-center mb-4">Zgłoś problem</h1>
 
         <div class="card p-4 shadow-sm">
-            <form>
+            <form asp-controller="Form" asp-action="Create" method="post">
                 <div class="mb-3">
                     <label class="form-label">Numer telefonu</label>
                     <input asp-for="PhoneNumber" class="form-control" id="phone" placeholder=" 123 456 789" required>
@@ -16,7 +16,7 @@
                 </div>
            
 
-                <button asp-controller="Form" asp-action="Create" type="submit" class="btn btn-primary">Wyślij zgłoszenie</button>
+                <button type="submit" class="btn btn-primary">Wyślij zgłoszenie</button>
             </form>
         </div>
     </div>

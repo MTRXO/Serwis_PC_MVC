@@ -19,7 +19,12 @@ namespace SerwisDataAccess.Repository
 
         public void AddRequest(T request)
         {
-           _db.SaveChanges();
+           _db.Add(request);
+        }
+
+        public void SaveChanges()
+        {
+            _db.SaveChanges();
         }
     }
 }
