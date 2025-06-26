@@ -11,6 +11,18 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped(typeof(IDbOperations<>), typeof(DbOperations<>));
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowMyFrontend", policy =>
+    {
+        policy.WithOrigins("https://naprawapcmszczonow.pl")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,6 +37,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseCors("AllowMyFrontend");
 
 app.UseAuthorization();
 
