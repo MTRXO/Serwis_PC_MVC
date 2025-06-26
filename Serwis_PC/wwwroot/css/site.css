@@ -138,6 +138,17 @@ footer {
     margin-top: 2px;
     position: static;
 }
+.step-number {
+    background-color: #007bff;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
 @media (max-width: 768px) {
     .header {
         padding-bottom: 150px;
