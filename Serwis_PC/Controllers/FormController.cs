@@ -24,11 +24,23 @@ namespace Serwis_PC.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(RequestModel obj)
         {
-            _operation.AddRequest(obj);
-            _operation.SaveChanges();
-            Console.WriteLine("Zapisano do bazy danych");
-            return View("RequestDone");
+
+
+            if (int.TryParse(obj.PhoneNumber, out int result))
+            {
+                ModelState.AddModelError("PhoneNumber", "Numer telefonu musi składać się z samych liczb");
+
+            }
+            if (ModelState.IsValid)
+            {
+                _operation.AddRequest(obj);
+                _operation.SaveChanges();
+                return View("RequestDone");
+            }
+            else return View("Index");
             
+
+
         }
 
 
