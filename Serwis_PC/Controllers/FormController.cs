@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Identity.Client;
 using SerwisDataAccess.Repository;
 using SerwisModels;
 
@@ -14,7 +13,6 @@ namespace Serwis_PC.Controllers
             _operation = operation;
         }
 
-
         public IActionResult Index()
         {
             return View();
@@ -24,24 +22,16 @@ namespace Serwis_PC.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(RequestModel obj)
         {
-
-            if (int.TryParse(obj.PhoneNumber, out int result))
+            if (!ModelState.IsValid)
             {
-                _operation.AddRequest(obj);
-                _operation.SaveChanges();
-                return View("RequestDone");
+                
+                return View("Index", obj);
             }
 
-            else
-            {
-                ModelState.AddModelError("PhoneNumber", "Numer telefonu musi składać sie z samych cyfr ");
-                return View("Index");
-            }
             
-
-
+            _operation.AddRequest(obj);
+            _operation.SaveChanges();
+            return View("RequestDone");
         }
-
-
     }
 }
