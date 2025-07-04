@@ -7,11 +7,13 @@
                 <div class="mb-3">
                     <label class="form-label">Numer telefonu</label>
                     <input asp-for="PhoneNumber" class="form-control" id="phone" placeholder=" 123 456 789" required>
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Opisz problem</label>
                     <input asp-for="RequestContent" class="form-control" id="phone" placeholder="Opisz usługe ktorej potrzebujesz" required>
+                <span asp-validation-for="RequestContent" class="text-danger"></span>
                   
                 </div>
            

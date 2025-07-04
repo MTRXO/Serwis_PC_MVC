@@ -9,14 +9,16 @@ namespace SerwisModels
 {
     public class RequestModel
     {
-        [Required]
         [Key]
         public int RequestID { get; set; }
-        [Required]
-        [StringLength(9, MinimumLength = 9, ErrorMessage = "Wprowadz porawny numer telefonu")]
-        public string PhoneNumber { get; set; }  
-        [Required]
-        [MaxLength(500)]
+
+        [Required(ErrorMessage = "Numer telefonu jest wymagany")]
+        [RegularExpression(@"^\d{9}$", ErrorMessage = "Numer telefonu musi zawierać dokładnie 9 cyfr")]
+        public string PhoneNumber { get; set; }
+
+        [Required(ErrorMessage = "Opis zgłoszenia jest wymagany")]
+        [MaxLength(500, ErrorMessage = "Opis może zawierać maksymalnie 500 znaków")]
         public string RequestContent { get; set; }
     }
+
 }
