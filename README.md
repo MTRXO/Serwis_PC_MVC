@@ -3,7 +3,7 @@
 **PC Service Mszczonów** is a simple web application designed for a **computer repair service**.  
 The project focuses on providing an easy and convenient way for customers to:
 - **Learn about the company and services** through a business card-style website.
-- **Submit computer repair requests online** and track their status.
+- **Submit computer repair requests online** 
 
 ---
 
