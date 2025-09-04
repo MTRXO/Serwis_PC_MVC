@@ -1,4 +1,4 @@
-# 🖥️ PC Service Mszczonów
+# 🖥️ PC Serwis Mszczonów
 
 **PC Service Mszczonów** is a simple web application designed for a **computer repair service**.  
 The project focuses on providing an easy and convenient way for customers to:
